@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div id="phone">
+        <div id="header">
+            <div id="camera"></div>
+            <div id="speaker"></div>
+        </div>
+        <iframe src="index2.html" frameborder="0" id="screen"></iframe>
+
+
+        <div id="logo">GulTion</div>
+        <hr>
+        <div id="body">
+            <div id="fnkeys">
+                <div id="softleft" class="key"></div>
+                <div id="softright" class="key"></div>
+                <div id="arrow">
+                    <div id="arrowleft"></div>
+                    <div id="arrowright"></div>
+                    <div id="enter"></div>
+                    <div id="arrowdown"></div>
+                    <div id="arrowup"></div>
+                </div>
+                <div id="call" class="key"></div>
+                <div id="exit" class="key"></div>
+            </div>
+           
+
+        </div>
+    </div>
+</body>
+<style>
+  
+    #arrow{
+        width: 70px;
+        height: 70px;
+        background: white;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        border-radius: 20px;
+
+    }
+    #enter{
+        width: 40px;
+        height: 40px;
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%,-50%);
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.342);
+
+    }
+    #arrowleft{
+        width: 10px;
+        height: 50px;
+        background: rgb(255, 255, 255);
+        transform: translate(2px,10px);
+    
+    }
+    #arrowright{
+        width: 10px;
+        height: 50px;
+        background: rgb(255, 255, 255);
+        transform: translate(58px,-40px);
+    
+    }
+    #arrowdown{
+        width: 50px;
+        height: 10px;
+        background: rgb(255, 255, 255);
+        transform: translate(10px,-42px);
+    
+    }
+    #arrowup{
+        width: 50px;
+        height: 10px;
+        background: rgb(255, 255, 255);
+        transform: translate(10px,-108px);
+    }
+
+    #fnkeys {
+        background: rgb(228, 228, 228);
+        width: 100%;
+        height: 90px;
+        position: absolute;
+
+    }
+
+    .key {
+        width: 55px;
+        height: 20px;
+        background: white;
+        border-radius: 20px;
+        position: absolute;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.473);
+        transition-duration: 0.2s;
+
+    }
+    .key:active{
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.473);
+        transform: translate(-1px,2px);
+    }
+    
+    #softleft {
+        top: 10px;
+        left: 10px;
+
+    }
+
+    #softright {
+        right: 10px;
+        top: 10px;
+    }
+
+    #call {
+        bottom: 10px;
+        left: 10px;
+    }
+    #exit{
+        right: 10px;
+        bottom: 10px;
+    }
+
+
+
+    #header {
+        text-align: center;
+
+    }
+    
+
+    #camera {
+        width: 20px;
+        height: 20px;
+        background: repeating-radial-gradient(grey 0px, grey 5px, rgb(255, 255, 255) 0, rgb(255, 255, 255) 20px);
+        border-radius: 50%;
+        text-align: center;
+        transform: translate(70px, 5px);
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    #speaker {
+        width: 60px;
+        height: 10px;
+        border-radius: 20px;
+        background: white;
+        transform: translate(100px, -10px);
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+
+    }
+
+    #logo {
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+        background: repeating-linear-gradient(45deg, rgba(37, 0, 122, 0.658), rgba(255, 53, 53, 0.445));
+        margin: 0px 10px;
+        border-radius: 30px;
+        background-size: 600px 50px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+        animation: logo 2s linear alternate infinite;
+    }
+
+    @keyframes logo {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 100% 0%;
+        }
+    }
+
+    #phone {
+
+        top: 50%;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        transition-duration: 1s;
+        background: white;
+    }
+
+    #screen {
+        width: 240px;
+        height: 320px;
+        margin: 0px 10px 0 10px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+
+        transition-duration: 2s;
+        transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+
+    }
+
+    #body {
+        height: 270px;
+        width: 240px;
+        background: rgb(243, 243, 243);
+        margin: 0px 10px 10px 10px;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        background: white;
+        transition-duration: 2s;
+        transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    body {
+        background: radial-gradient(50% 50%, white, rgb(63, 63, 63));
+
+        background-size: 100vw 100vw;
+    }
+
+     #phone{
+        transform :perspective(700px) rotateX(30deg) rotateZ(-45deg) translate(100%, -100%) scale(1.3);
+        box-shadow: -4px 4px 0px rgb(187, 187, 187),
+         -8px 8px 0px rgb(187, 187, 187),
+          -12px 12px 0px rgb(197, 197, 197) ;
+
+    }
+    #phone > #screen{
+        transform :perspective(00px) rotateX(0deg) rotateZ(-0deg) scale(1.2) translate(150px,-250px);
+        box-shadow:  -33.6px 53.76px 0px -6.25px rgba(187, 187, 187,0.1),
+         -67.2px 107.52px 0px -12.5px rgba(187, 187, 187,0.2),
+          -96px 153.6px 0px -17.9px rgba(197, 197, 197,0.3),
+          -120px 192px 0px -22.4px rgba(197, 197, 197,0.4),
+          -150px 240px 0px -28px rgba(197, 197, 197,0.5);
+
+    }
+    #phone > #body{
+        transform :perspective(00px) rotateX(0deg) rotateZ(-0deg) scale(1.2) translate(100px,-150px);
+        box-shadow: -22.4px 33.6px 0px -6.25px rgba(187, 187, 187,0.1),
+         -44.8px 67.2px 0px -12.5px rgba(187, 187, 187,0.2),
+          -64px 96px 0px -17.9px rgba(197, 197, 197,0.3),
+          -80px 120px 0px -22.4px rgba(197, 197, 197,0.4),
+          -100px 150px 0px -28px rgba(197, 197, 197,0.5);
+    }
+    #phone:hover{
+        transform :perspective(0px) rotateX(0deg) rotateZ(0deg) translate(-50%, -50%) scale(1);
+        box-shadow:0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    #phone:hover > #screen{
+        transform :perspective(00px) rotateX(0deg) rotateZ(-0deg) scale(1) translate(0px,0px);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    #phone:hover>#body{
+        transform :perspective(00px) rotateX(0deg) rotateZ(-0deg) scale(1) translate(0px,0px);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+     
+</style>
+
+<script>
+    let softright = document.getElementById('softright');
+    softright.addEventListener('click',function(){
+        
+    })
+    let phone = document.getElementById('phone');
+    let screen = document.getElementById('screen');
+    let body = document.getElementById('body');
+    let logo = document.getElementById('logo');
+    phone.addEventListener('mouseout', function c() {
+
+        body.style.transitionDuration = '2s'
+        screen.style.transitionDuration = '2s'
+
+    });
+
+
+    phone.addEventListener('mouseover', function () {
+
+        body.style.transitionDuration = '1s'
+        screen.style.transitionDuration = '1s'
+
+    })
+    screen.onload = function(){
+        let ele = screen.contentWindow.document
+    console.log(ele.head);
+    }
+    
+    
+</script>
+
+</html>
